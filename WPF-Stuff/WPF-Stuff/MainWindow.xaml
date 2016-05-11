@@ -6,8 +6,14 @@
         xmlns:local="clr-namespace:WPF_Stuff"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <local:SingleRow x:Name="TheSingleRow"></local:SingleRow>
-        <Button x:Name="button" Content="Add Column" HorizontalAlignment="Left" Margin="222,52,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+    <Grid x:Name="MainGridPanel" VerticalAlignment="Bottom" Height="200">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <local:SingleRow x:Name="TheSingleRow" Grid.Row="1"></local:SingleRow>
+        <Button x:Name="HighlightButton" Content="Highlight Column" HorizontalAlignment="Left" Margin="94,-36,0,0" VerticalAlignment="Top" Width="122" Click="button_Click" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="23"/>
+        <TextBox x:Name="ColumnIndexTextBox" HorizontalAlignment="Left" Height="23" Margin="14,-36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" PreviewTextInput="ColumnIndexTextBox_PreviewTextInput"/>
+        <DatePicker x:Name="FridayPicker" HorizontalAlignment="Left" Margin="290,-88,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
